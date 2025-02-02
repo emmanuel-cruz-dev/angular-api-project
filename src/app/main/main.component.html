@@ -1,5 +1,15 @@
 <p>main works!</p>
-<div *ngFor="let pokemon of datos.results">
+<!-- <div *ngFor="let pokemon of datos.results">
   <h2>{{ pokemon.name }}</h2>
-  <p>{{ pokemon.description }}</p>
+</div> -->
+
+<div *ngIf="datos">
+  <h1>Datos de la API:</h1>
+  <div *ngFor="let pokemon of datos">
+    <p>{{ pokemon.name }}</p>
+  </div>
+</div>
+
+<div *ngIf="!datos">
+  <p>Cargando datos...</p>
 </div>

@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DataService {
-  private apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
+  private apiUrl = 'https://rickandmortyapi.com/api/character';
 
   constructor(private http: HttpClient) {}
 
-  getData(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  public getData(): Observable<any> {
+    console.log('getData');
+    return this.http.get<any>(this.apiUrl);
   }
 }
