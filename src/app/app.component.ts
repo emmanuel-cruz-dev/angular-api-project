@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, HeaderComponent, BrowserModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
