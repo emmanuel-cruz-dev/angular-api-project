@@ -5,8 +5,14 @@
 
 <div *ngIf="datos">
   <h1>Datos de la API:</h1>
-  <div *ngFor="let pokemon of datos">
-    <p>{{ pokemon.name }}</p>
+  <div *ngFor="let char of datos" class="character__container">
+    <img src="{{ char.image }}" />
+    <div>
+      <p>{{ char.name }}</p>
+      <p>{{ char.id }}</p>
+      <span>{{ char.status }}</span> -
+      <span>{{ char.species }}</span>
+    </div>
   </div>
 </div>
 
