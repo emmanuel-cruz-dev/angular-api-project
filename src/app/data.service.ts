@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
+  private apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
+
+  getData(): Observable<any> {
+    return this.http.get(this.apiUrl);
+  }
 }
