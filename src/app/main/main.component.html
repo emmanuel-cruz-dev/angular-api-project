@@ -1,20 +1,17 @@
-<p>main works!</p>
-<!-- <div *ngFor="let pokemon of datos.results">
-  <h2>{{ pokemon.name }}</h2>
-</div> -->
-
-<div *ngIf="datos">
+<section>
   <h1>Datos de la API:</h1>
-  <div *ngFor="let char of datos" class="character__container">
-    <img src="{{ char.image }}" />
-    <div>
-      <p>{{ char.name }}</p>
-      <p>{{ char.id }}</p>
-      <span>{{ char.status }}</span> -
-      <span>{{ char.species }}</span>
+  <article *ngIf="datos" class="container">
+    <div *ngFor="let char of datos" class="character__container">
+      <img src="{{ char.image }}" />
+      <div>
+        <p>{{ char.name }}</p>
+        <p>{{ char.id }}</p>
+        <span>{{ char.status }}</span> -
+        <span>{{ char.species }}</span>
+      </div>
     </div>
-  </div>
-</div>
+  </article>
+</section>
 
 <div *ngIf="!datos">
   <p>Cargando datos...</p>

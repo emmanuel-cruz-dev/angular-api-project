@@ -1,5 +1,25 @@
+.container{
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-gap: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
 .character__container {
+  width: 100%;
   display: flex;
-  margin: 1rem;
   gap: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  background-color: #efefef;
+}
+
+.character__container img {
+  width: 50%;
+  height: auto;
 }
