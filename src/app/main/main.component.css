@@ -38,7 +38,7 @@ section {
 }
 
 .character__name {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.3rem;
 }
@@ -74,6 +74,21 @@ section {
 .unknown::before {
   background-color: rgb(121, 121, 121);
 }
+
+.buttons__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.buttons__container button{
+  padding: .5rem 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
 
 @keyframes pulse {
   0% {
