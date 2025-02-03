@@ -31,6 +31,11 @@
 padding-block: 1rem;
 }
 
+.character__name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
   .character__container {
     margin: 1rem 1rem;
