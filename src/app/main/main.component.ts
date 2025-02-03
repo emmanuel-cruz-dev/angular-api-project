@@ -59,11 +59,6 @@ export class MainComponent implements OnInit {
     this.llenarDatos((this.dataService.pageNum += 1));
   }
 
-  selectPage(num: number) {
-    this.scrollToTop();
-    this.llenarDatos(num);
-  }
-
   scrollToTop() {
     window.scrollTo(0, 0);
   }

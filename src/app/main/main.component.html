@@ -38,13 +38,13 @@
       Prev
     </button>
     <div class="page__selector">
-      <button (click)="selectPage(dataService.pageNum - 1)">
+      <button *ngIf="dataService.pageNum > 1" (click)="prevPage()">
         {{ dataService.pageNum - 1 }}
       </button>
       <button class="selector__actual-page" disabled>
         {{ dataService.pageNum }}
       </button>
-      <button (click)="selectPage(dataService.pageNum + 1)">
+      <button (click)="nextPage()">
         {{ dataService.pageNum + 1 }}
       </button>
     </div>
