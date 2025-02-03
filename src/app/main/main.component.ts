@@ -81,7 +81,10 @@ export class MainComponent implements OnInit {
   }
 
   statusSelector(event: Event) {
-    console.log('Status Selector', event);
+    const target = event.target as HTMLSelectElement;
+    const value = target ? target.value : 'Alive';
+
+    console.log(value);
 
     // const target = event.target as HTMLSelectElement;
     // const value = target ? target.value : 'Alive';
