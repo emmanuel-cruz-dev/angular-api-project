@@ -39,8 +39,12 @@ section {
 
 .character__name {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 0.3rem;
+}
+
+.character__data {
+  font-weight: 600;
 }
 
 .character__subtitle {
