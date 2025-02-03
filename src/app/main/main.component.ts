@@ -18,8 +18,8 @@ export class MainComponent implements OnInit {
     this.llenarDatos();
   }
 
-  llenarDatos() {
-    this.dataService.getData().subscribe((data) => {
+  llenarDatos(num = this.dataService.pageNum) {
+    this.dataService.getData(num).subscribe((data) => {
       this.datos = data.results;
       this.precargarEpisodios();
     });
@@ -52,5 +52,6 @@ export class MainComponent implements OnInit {
 
   nextPage() {
     console.log('Next Page');
+    this.llenarDatos(this.dataService.pageNum++);
   }
 }

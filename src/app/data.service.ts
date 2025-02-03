@@ -6,13 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DataService {
-  private apiUrl = 'https://rickandmortyapi.com/api/character';
+  pageNum: number = 1;
+  private apiUrl = `https://rickandmortyapi.com/api/character/?page=`;
   private episodeUrl = 'https://rickandmortyapi.com/api/episode';
 
   constructor(private http: HttpClient) {}
 
-  public getData(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+  public getData(num = this.pageNum): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}${num}`);
   }
 
   public getEpisodes(num: number): Observable<any> {
