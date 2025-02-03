@@ -1,5 +1,10 @@
 <section>
   <article class="page__filter">
+    <div>
+      <label>Search:</label>
+      <input type="text" placeholder="Id, name, species..." />
+      <button (click)="searchCharacter()">Search</button>
+    </div>
     <select (change)="pageSelector($event)" name="page">
       <option value="10">10</option>
       <option value="20">20</option>

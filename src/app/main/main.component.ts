@@ -70,4 +70,13 @@ export class MainComponent implements OnInit {
   scrollToTop() {
     window.scrollTo(0, 0);
   }
+
+  searchCharacter() {
+    console.log('Searching...');
+    // const search = this.searchInput.value;
+    // this.dataService.searchCharacter(search).subscribe((data) => {
+    //   this.datos = data.results;
+    //   this.precargarEpisodios();
+    // });
+  }
 }
