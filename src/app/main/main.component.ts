@@ -79,4 +79,13 @@ export class MainComponent implements OnInit {
     //   this.precargarEpisodios();
     // });
   }
+
+  statusSelector(event: Event) {
+    console.log('Status Selector', event);
+
+    // const target = event.target as HTMLSelectElement;
+    // const value = target ? target.value : 'Alive';
+    // this.dataService.status = value;
+    // this.llenarDatos();
+  }
 }

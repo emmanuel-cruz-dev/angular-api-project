@@ -12,6 +12,13 @@
       <option value="40">40</option>
       <option value="50">50</option>
     </select>
+    <div>
+      <select (change)="statusSelector($event)" name="status">
+        <option value="Alive">Alive</option>
+        <option value="Dead">Dead</option>
+        <option value="unknown">Unknown</option>
+      </select>
+    </div>
   </article>
   <article *ngIf="datos" class="container">
     <div *ngFor="let char of datos" class="character__container">
