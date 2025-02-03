@@ -3,7 +3,7 @@
   <article *ngIf="datos" class="container">
     <div *ngFor="let char of datos" class="character__container">
       <img src="{{ char.image }}" />
-      <div>
+      <div class="character__info">
         <p>{{ char.name }}</p>
         <p>{{ char.id }}</p>
         <span>{{ char.status }}</span> -

@@ -14,16 +14,21 @@
   display: flex;
   gap: 1rem;
   margin: 0.5rem 0;
-  padding: 1rem;
+  /* padding: 1rem; */
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 0 5px #ccc;
   background-color: #efefef;
+  overflow: hidden;
 }
 
 .character__container img {
   width: 50%;
   height: auto;
+}
+
+.character__info {
+padding-block: 1rem;
 }
 
 @media screen and (min-width: 768px) {
