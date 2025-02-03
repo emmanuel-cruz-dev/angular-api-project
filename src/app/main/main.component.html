@@ -35,8 +35,13 @@
   </article>
   <article class="buttons__container">
     <button [disabled]="dataService.pageNum <= 1" (click)="prevPage()">
-      Previous
+      Prev
     </button>
+    <div class="page__selector">
+      <!-- <button>1</button> -->
+      <button>{{ dataService.pageNum }}</button>
+      <button>2</button>
+    </div>
     <button (click)="nextPage()">Next</button>
   </article>
 </section>
