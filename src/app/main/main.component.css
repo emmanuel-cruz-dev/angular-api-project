@@ -1,7 +1,9 @@
 .container{
-  max-width: 1200px;
+  margin: 0 auto;
+  /* max-width: 1200px; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  justify-items: center;
   grid-gap: 1rem;
   padding: 1rem;
   overflow: hidden;
@@ -11,7 +13,7 @@
   width: 100%;
   display: flex;
   gap: 1rem;
-  margin: 1rem;
+  margin: 0.5rem 0;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -22,4 +24,16 @@
 .character__container img {
   width: 50%;
   height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .character__container {
+    margin: 1rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 968px;
+  }
 }
