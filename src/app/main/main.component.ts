@@ -45,4 +45,12 @@ export class MainComponent implements OnInit {
     const num = Number(url.slice(url.lastIndexOf('/') + 1));
     return this.episode[num] || 'Loading...';
   }
+
+  prevPage() {
+    console.log('Previous Page');
+  }
+
+  nextPage() {
+    console.log('Next Page');
+  }
 }

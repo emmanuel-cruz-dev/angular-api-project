@@ -16,7 +16,7 @@ export class DataService {
   }
 
   public getEpisodes(num: number): Observable<any> {
-    console.log(this.http.get<any>(`${this.episodeUrl}/${num}`));
+    // console.log(this.http.get<any>(`${this.episodeUrl}/${num}`));
     return this.http.get<any>(`${this.episodeUrl}/${num}`);
   }
 }
