@@ -23,13 +23,13 @@
         </div>
 
         <div>
-          <p>Last known location:</p>
+          <p class="character__subtitle">Last known location:</p>
           <p>{{ char.location.name }}</p>
         </div>
 
         <div>
-          <p>First seen in:</p>
-          <p>{{ char.episode }}</p>
+          <p class="character__subtitle">First seen in:</p>
+          <p>{{ getEpisodeNumber(char.episode[0]) }}</p>
         </div>
       </div>
     </div>

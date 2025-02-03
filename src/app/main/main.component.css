@@ -36,6 +36,13 @@
 .character__name {
   font-size: 1.25rem;
   font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.character__subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.3rem;
 }
 
 .status-alive::before,
@@ -80,6 +87,6 @@
 
 @media screen and (min-width: 1024px) {
   .container {
-    max-width: 1024px;
+    max-width: 1124px;
   }
 }
