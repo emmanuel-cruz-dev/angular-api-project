@@ -34,7 +34,9 @@
     </div>
   </article>
   <article class="buttons__container">
-    <button (click)="prevPage()">Prev</button>
+    <button [disabled]="dataService.pageNum <= 1" (click)="prevPage()">
+      Previous
+    </button>
     <button (click)="nextPage()">Next</button>
   </article>
 </section>

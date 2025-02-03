@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
   datos: any[] = [];
   episode: { [key: number]: string } = {};
 
-  constructor(private dataService: DataService) {}
+  constructor(public dataService: DataService) {}
 
   ngOnInit(): void {
     this.llenarDatos();
@@ -48,10 +48,12 @@ export class MainComponent implements OnInit {
 
   prevPage() {
     console.log('Previous Page');
+    if (this.dataService.pageNum === 1) return;
+    this.llenarDatos((this.dataService.pageNum -= 1));
   }
 
   nextPage() {
     console.log('Next Page');
-    this.llenarDatos(this.dataService.pageNum++);
+    this.llenarDatos((this.dataService.pageNum += 1));
   }
 }
