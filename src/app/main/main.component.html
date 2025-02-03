@@ -4,10 +4,33 @@
     <div *ngFor="let char of datos" class="character__container">
       <img src="{{ char.image }}" />
       <div class="character__info">
-        <p class="character__name">{{ char.name }}</p>
-        <p>{{ char.id }}</p>
-        <span>{{ char.status }}</span> -
-        <span>{{ char.species }}</span>
+        <div>
+          <p class="character__name">{{ char.name }}</p>
+          <!-- <p>{{ char.id }}</p> -->
+          <p>
+            <span
+              [ngClass]="{
+                'status-alive': char.status === 'Alive',
+                'status-dead': char.status === 'Dead',
+                unknown: char.status !== 'Alive' && char.status !== 'Dead'
+              }"
+            >
+              {{ char.status }}
+            </span>
+            -
+            <span>{{ char.species }}</span>
+          </p>
+        </div>
+
+        <div>
+          <p>Last known location:</p>
+          <p>{{ char.location.name }}</p>
+        </div>
+
+        <div>
+          <p>First seen in:</p>
+          <p>{{ char.episode }}</p>
+        </div>
       </div>
     </div>
   </article>
