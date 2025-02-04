@@ -9,3 +9,12 @@
 html{
   scroll-behavior: smooth;
 }
+
+:root {
+  --primary-color: #1ed760;
+  --secondary-color: #121212;
+  --black-color: #000;
+  --white-color: #fff;
+  --font-size: 16px;
+  --padding: 1rem;
+}

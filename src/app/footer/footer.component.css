@@ -3,7 +3,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 1.75rem;
-  background-color: #333;
+  background-color: var(--black-color);
   color: #fff;
   font-family: -apple-system, 'Helvetica Neue', sans-serif;
 }
