@@ -1,8 +1,12 @@
 header {
+  padding: 1rem;
+}
+
+header a {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
 }
 
 header img {
