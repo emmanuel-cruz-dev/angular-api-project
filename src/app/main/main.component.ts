@@ -3,10 +3,11 @@ import { DataService } from '../data.service';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-main',
-  imports: [NgIf, NgFor, NgClass],
+  imports: [NgIf, NgFor, NgClass, FontAwesomeModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
@@ -16,7 +17,9 @@ export class MainComponent implements OnInit {
   pages: number = 42;
   pageNumbers: number[] = [];
 
-  constructor(public dataService: DataService) {}
+  constructor(public dataService: DataService, private library: FaIconLibrary) {
+    library.addIconPacks(fas);
+  }
 
   ngOnInit(): void {
     this.llenarDatos();

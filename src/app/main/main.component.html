@@ -7,7 +7,9 @@
           placeholder="Search for a character"
           id="search-character__input"
         />
-        <button (click)="searchCharacter()">Search</button>
+        <button (click)="searchCharacter()" class="search-button">
+          <fa-icon [icon]="['fas', 'search']"></fa-icon>
+        </button>
       </div>
       <div>
         <label>Page:</label>
