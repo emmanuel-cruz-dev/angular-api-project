@@ -51,16 +51,19 @@ main,
   background-color: var(--primary-color);
   color: var(--black-color);
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
 }
 
-.main__search-container button:hover{
-  background-color: var(--primary-color-light);
+.main__search-container button fa-icon{
+  color: var(--black-color);
+  transition: color .3s ease-in-out;
+}
+
+.main__search-container button:hover fa-icon{
+  color: var(--white-color);
 }
 
 .container{
   margin: 0 auto;
-  /* max-width: 1200px; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   justify-items: center;
