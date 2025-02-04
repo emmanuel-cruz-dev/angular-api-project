@@ -66,6 +66,7 @@
     </article>
     <article class="buttons__container">
       <button [disabled]="dataService.pageNum <= 1" (click)="prevPage()">
+        <fa-icon [icon]="['fas', 'chevron-left']"></fa-icon>
         Prev
       </button>
       <div class="page__selector">
@@ -81,6 +82,7 @@
       </div>
       <button [disabled]="dataService.pageNum >= 42" (click)="nextPage()">
         Next
+        <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
       </button>
     </article>
   </section>
