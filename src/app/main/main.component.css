@@ -31,6 +31,7 @@ section {
   box-shadow: 0 0 5px #ccc;
   background-color: #efefef;
   overflow: hidden;
+  position: relative;
 }
 
 .character__container img {
@@ -40,27 +41,26 @@ section {
 
 .character__info {
   width: 100%;
-  padding: 1rem 1rem 1rem 0;
+  padding: .75rem 1rem .75rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
 }
 
 .character__id {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  bottom: .5rem;
+  left: .5rem;
   font-size: 0.8rem;
-  color: #666;
+  background-color: #000;
+  color: #fff;
   font-weight: 600;
-
-
-  background-color: #efefef;
-  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  box-shadow: 0 0 5px #ccc;
-
 }
 
 .character__name {

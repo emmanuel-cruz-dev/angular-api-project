@@ -28,9 +28,9 @@
   </article>
   <article *ngIf="datos" class="container">
     <div *ngFor="let char of datos" class="character__container">
+      <p class="character__id">#{{ char.id }}</p>
       <img src="{{ char.image }}" />
       <div class="character__info">
-        <p class="character__id">#{{ char.id }}</p>
         <div>
           <p class="character__name">{{ char.name }}</p>
           <p class="character__data">
