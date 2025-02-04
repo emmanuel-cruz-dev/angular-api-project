@@ -39,10 +39,28 @@ section {
 }
 
 .character__info {
+  width: 100%;
   padding: 1rem 1rem 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+}
+
+.character__id {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 600;
+
+
+  background-color: #efefef;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #ccc;
+
 }
 
 .character__name {
@@ -118,18 +136,12 @@ section {
   user-select: none;
 }
 
-/* .selector__actual-page{
-  border: none;
-  background-color: transparent;
-  cursor: none;
-} */
-
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(160, 238, 144, 0.7);
   }
 
-  70% {
+  80% {
     box-shadow: 0 0 0 10px rgba(144, 238, 144, 0);
   }
 
