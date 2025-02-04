@@ -29,24 +29,30 @@ main,
 }
 
 .main__search-container input{
+  font-size: 1.05rem;
   border: none;
   background-color: transparent;
-  padding: .5rem 1rem;
+  padding: 0 1rem;
+}
+
+.main__search-container input:focus{
+  outline: none;
 }
 
 .main__search-container button{
+  font-size: 1.1rem;
   width: 20%;
   height: 100%;
   padding: .5rem 1rem;
   font-weight: bolder;
   border: none;
-  background-color: #09f;
+  background-color: #0d6efd;
   color: #fff;
   cursor: pointer;
 }
 
 .main__search-container button:hover{
-  background-color: rgb(2, 106, 132);
+  background-color: #0b5ed7;
 }
 
 .container{
@@ -165,6 +171,10 @@ main,
 .page__selector{
   display: flex;
   gap: .5rem;
+}
+
+.page__selector-default{
+  color: #848383;
 }
 
 .current-page__indicator{
