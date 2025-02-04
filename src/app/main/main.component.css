@@ -1,5 +1,6 @@
 main {
-  margin: 1rem auto;
+  padding-block: 1rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,13 +48,14 @@ main,
   padding: .5rem 1rem;
   font-weight: bolder;
   border: none;
-  background-color: #0d6efd;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--black-color);
   cursor: pointer;
+  transition: background-color .3s ease-in-out;
 }
 
 .main__search-container button:hover{
-  background-color: #0b5ed7;
+  background-color: var(--primary-color-light);
 }
 
 .container{

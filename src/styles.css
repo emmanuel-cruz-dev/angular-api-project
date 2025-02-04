@@ -12,6 +12,7 @@ html{
 
 :root {
   --primary-color: #1ed760;
+  --primary-color-light: #2ecc71;
   --secondary-color: #121212;
   --black-color: #000;
   --white-color: #fff;
