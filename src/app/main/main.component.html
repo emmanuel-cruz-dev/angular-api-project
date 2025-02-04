@@ -12,14 +12,12 @@
       </div>
       <div>
         <label>Page:</label>
-        <input
-          (change)="pageSelector($event)"
-          type="number"
-          min="1"
-          max="42"
-          id="page-input__selector"
-          placeholder="{{ dataService.pageNum }}"
-        />
+        <select (change)="pageSelector($event)" name="page">
+          <option value="default">{{ dataService.pageNum }}</option>
+          <option *ngFor="let page of pageNumbers" [value]="page">
+            {{ page }}
+          </option>
+        </select>
       </div>
       <div>
         <label>Status:</label>

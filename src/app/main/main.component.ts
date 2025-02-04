@@ -11,11 +11,14 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 export class MainComponent implements OnInit {
   datos: any[] = [];
   episode: { [key: number]: string } = {};
+  pages: number = 42;
+  pageNumbers: number[] = [];
 
   constructor(public dataService: DataService) {}
 
   ngOnInit(): void {
     this.llenarDatos();
+    this.generatePageNumbers();
   }
 
   llenarDatos(num = this.dataService.pageNum) {
@@ -96,5 +99,9 @@ export class MainComponent implements OnInit {
       this.datos = data.results;
       this.dataService.getCharacterStatus(value);
     });
+  }
+
+  generatePageNumbers() {
+    this.pageNumbers = Array.from({ length: this.pages }, (_, i) => i + 1);
   }
 }
