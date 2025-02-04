@@ -19,8 +19,34 @@ main,
   min-height: calc(100vh - 7rem);
 }
 
-.search-button{
+.main__search-container{
+  display: flex;
+  align-items: center;
+  background-color: #efefef;
+  border-radius: 4rem;
+  box-shadow: 0 0 5px #ccc;
+  overflow: hidden;
+}
+
+.main__search-container input{
+  border: none;
+  background-color: transparent;
+  padding: .5rem 1rem;
+}
+
+.main__search-container button{
+  width: 20%;
+  height: 100%;
+  padding: .5rem 1rem;
+  font-weight: bolder;
+  border: none;
+  background-color: #09f;
+  color: #fff;
   cursor: pointer;
+}
+
+.main__search-container button:hover{
+  background-color: rgb(2, 106, 132);
 }
 
 .container{
