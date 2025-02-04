@@ -79,7 +79,8 @@ main,
   gap: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  box-shadow: 0 0 5px #ccc;
+  /* box-shadow: 0 0 5px #ccc; */
+  box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
   background-color: #efefef;
   overflow: hidden;
   position: relative;
