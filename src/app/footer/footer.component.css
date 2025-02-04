@@ -1,11 +1,22 @@
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1.75rem;
   background-color: #333;
   color: #fff;
   font-family: -apple-system, 'Helvetica Neue', sans-serif;
+}
+
+.footer__copyright,
+.footer__arrow {
+  flex: 1;
+  /* border: 1px solid red; */
+  /* text-align: center; */
+}
+
+.footer__arrow{
+  text-align: right;
 }
 
 footer a {

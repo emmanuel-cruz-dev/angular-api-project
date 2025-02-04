@@ -1,16 +1,6 @@
 <main>
   <section>
     <article class="page__filter">
-      <div class="main__search-container">
-        <input
-          type="text"
-          placeholder="Search for a character"
-          id="search-character__input"
-        />
-        <button (click)="searchCharacter()" class="search-button">
-          <fa-icon [icon]="['fas', 'search']"></fa-icon>
-        </button>
-      </div>
       <div>
         <label>Page:</label>
         <select (change)="pageSelector($event)" name="page">
@@ -22,10 +12,22 @@
           </option>
         </select>
       </div>
+
+      <div class="main__search-container">
+        <input
+          type="text"
+          placeholder="Search for a character"
+          id="search-character__input"
+        />
+        <button (click)="searchCharacter()" class="search-button">
+          <fa-icon [icon]="['fas', 'search']"></fa-icon>
+        </button>
+      </div>
+
       <div>
-        <label>Status:</label>
+        <!-- <label>Status:</label> -->
         <select (change)="statusSelector($event)" name="status">
-          <option value="default">Default</option>
+          <option value="default">Status</option>
           <option value="alive">Alive</option>
           <option value="dead">Dead</option>
           <option value="unknown">Unknown</option>
