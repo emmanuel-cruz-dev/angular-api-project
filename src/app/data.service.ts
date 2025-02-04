@@ -9,6 +9,8 @@ export class DataService {
   pageNum: number = 1;
   private apiUrl = `https://rickandmortyapi.com/api/character/?page=`;
   private episodeUrl = 'https://rickandmortyapi.com/api/episode';
+  private characterStatus =
+    'https://rickandmortyapi.com/api/character/?status=';
 
   constructor(private http: HttpClient) {}
 
@@ -18,7 +20,10 @@ export class DataService {
   }
 
   public getEpisodes(num: number): Observable<any> {
-    // console.log(this.http.get<any>(`${this.episodeUrl}/${num}`));
     return this.http.get<any>(`${this.episodeUrl}/${num}`);
+  }
+
+  public getCharacterStatus(status: string): Observable<any> {
+    return this.http.get<any>(`${this.characterStatus}${status}`);
   }
 }
