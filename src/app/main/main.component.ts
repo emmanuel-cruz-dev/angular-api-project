@@ -79,17 +79,42 @@ export class MainComponent implements OnInit {
       'search-character__input'
     ) as HTMLInputElement | null;
 
-    if (searchInput) {
+    if (!searchInput) return;
+    try {
       const value = searchInput.value;
       console.log(value);
-      this.dataService.searchCharacter(value).subscribe((data) => {
-        this.datos = data.results;
-        this.precargarEpisodios(); // Asegúrate de precargar los episodios si es necesario
-      });
-    } else {
+
+      this.dataService.searchCharacter(value).subscribe(
+        (data) => {
+          if (data.results && data.results.length > 0) {
+            this.datos = data.results;
+            this.precargarEpisodios(); // Asegúrate de precargar los episodios si es necesario
+          } else {
+            console.error('Character not found');
+            alert('Character name not found');
+          }
+        },
+        (error) => {
+          console.error('Search input element not found', error);
+          alert('Character name not found');
+        }
+      );
+    } catch (error) {
       console.error('Search input element not found');
+      alert('Character name not found');
     }
   }
+  // if (searchInput) {
+  //   const value = searchInput.value;
+  //   console.log(value);
+  //   this.dataService.searchCharacter(value).subscribe((data) => {
+  //     this.datos = data.results;
+  //     this.precargarEpisodios(); // Asegúrate de precargar los episodios si es necesario
+  //   });
+  // } else {
+  //   console.error('Search input element not found');
+  //   alert('Character name not found');
+  // }
 
   statusSelector(event: Event) {
     const target = event.target as HTMLSelectElement;
