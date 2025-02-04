@@ -72,12 +72,16 @@ export class MainComponent implements OnInit {
   }
 
   searchCharacter() {
-    console.log('Searching...');
-    // const search = this.searchInput.value;
-    // this.dataService.searchCharacter(search).subscribe((data) => {
-    //   this.datos = data.results;
-    //   this.precargarEpisodios();
-    // });
+    const searchInput = document.getElementById(
+      'search-character__input'
+    ) as HTMLInputElement | null;
+
+    if (searchInput) {
+      const value = searchInput.value;
+      console.log(value);
+    } else {
+      console.error('Search input element not found');
+    }
   }
 
   statusSelector(event: Event) {
