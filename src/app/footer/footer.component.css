@@ -10,16 +10,33 @@ footer {
 
 .footer__copyright,
 .footer__arrow {
-  flex: 1;
+  /* flex: 1; */
   /* border: 1px solid red; */
   /* text-align: center; */
 }
 
 .footer__arrow{
   text-align: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  transition: color .3s ease-in-out;
 }
 
-footer a {
+.footer__arrow a{
+  color: var(--black-color);
+}
+
+.footer__arrow:hover{
+  color: var(--white-color);
+}
+
+.footer__copyright a,
+.footer__author a{
   color: inherit;
   text-decoration: none;
 }
