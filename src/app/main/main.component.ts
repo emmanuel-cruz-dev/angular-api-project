@@ -79,6 +79,10 @@ export class MainComponent implements OnInit {
     if (searchInput) {
       const value = searchInput.value;
       console.log(value);
+      this.dataService.searchCharacter(value).subscribe((data) => {
+        this.datos = data.results;
+        this.precargarEpisodios(); // Asegúrate de precargar los episodios si es necesario
+      });
     } else {
       console.error('Search input element not found');
     }
