@@ -1,90 +1,92 @@
-<section>
-  <article class="page__filter">
-    <div>
-      <label>Search character:</label>
-      <input
-        type="text"
-        placeholder="Character name"
-        id="search-character__input"
-      />
-      <button (click)="searchCharacter()">Search</button>
-    </div>
-    <div>
-      <label>Page:</label>
-      <input
-        (change)="pageSelector($event)"
-        type="number"
-        min="1"
-        max="42"
-        id="page-input__selector"
-        placeholder="{{ dataService.pageNum }}"
-      />
-    </div>
-    <div>
-      <label>Status:</label>
-      <select (change)="statusSelector($event)" name="status">
-        <option value="default">Default</option>
-        <option value="alive">Alive</option>
-        <option value="dead">Dead</option>
-        <option value="unknown">Unknown</option>
-      </select>
-    </div>
-  </article>
-  <article *ngIf="datos" class="container">
-    <div *ngFor="let char of datos" class="character__container">
-      <p class="character__id">#{{ char.id }}</p>
-      <img src="{{ char.image }}" />
-      <div class="character__info">
-        <div>
-          <p class="character__name">{{ char.name }}</p>
-          <p class="character__data">
-            <span
-              [ngClass]="{
-                'status-alive': char.status === 'Alive',
-                'status-dead': char.status === 'Dead',
-                unknown: char.status !== 'Alive' && char.status !== 'Dead'
-              }"
-            >
-              {{ char.status }}
-            </span>
-            -
-            <span>{{ char.species }}</span>
-          </p>
-        </div>
+<main>
+  <section>
+    <article class="page__filter">
+      <div>
+        <label>Search character:</label>
+        <input
+          type="text"
+          placeholder="Character name"
+          id="search-character__input"
+        />
+        <button (click)="searchCharacter()">Search</button>
+      </div>
+      <div>
+        <label>Page:</label>
+        <input
+          (change)="pageSelector($event)"
+          type="number"
+          min="1"
+          max="42"
+          id="page-input__selector"
+          placeholder="{{ dataService.pageNum }}"
+        />
+      </div>
+      <div>
+        <label>Status:</label>
+        <select (change)="statusSelector($event)" name="status">
+          <option value="default">Default</option>
+          <option value="alive">Alive</option>
+          <option value="dead">Dead</option>
+          <option value="unknown">Unknown</option>
+        </select>
+      </div>
+    </article>
+    <article *ngIf="datos" class="container">
+      <div *ngFor="let char of datos" class="character__container">
+        <p class="character__id">#{{ char.id }}</p>
+        <img src="{{ char.image }}" />
+        <div class="character__info">
+          <div>
+            <p class="character__name">{{ char.name }}</p>
+            <p class="character__data">
+              <span
+                [ngClass]="{
+                  'status-alive': char.status === 'Alive',
+                  'status-dead': char.status === 'Dead',
+                  unknown: char.status !== 'Alive' && char.status !== 'Dead'
+                }"
+              >
+                {{ char.status }}
+              </span>
+              -
+              <span>{{ char.species }}</span>
+            </p>
+          </div>
 
-        <div>
-          <p class="character__subtitle">Last known location:</p>
-          <p>{{ char.location.name }}</p>
-        </div>
+          <div>
+            <p class="character__subtitle">Last known location:</p>
+            <p>{{ char.location.name }}</p>
+          </div>
 
-        <div>
-          <p class="character__subtitle">First seen in:</p>
-          <p>{{ getEpisodeNumber(char.episode[0]) }}</p>
+          <div>
+            <p class="character__subtitle">First seen in:</p>
+            <p>{{ getEpisodeNumber(char.episode[0]) }}</p>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
-  <article class="buttons__container">
-    <button [disabled]="dataService.pageNum <= 1" (click)="prevPage()">
-      Prev
-    </button>
-    <div class="page__selector">
-      <button *ngIf="dataService.pageNum > 1" (click)="prevPage()">
-        {{ dataService.pageNum - 1 }}
+    </article>
+    <article class="buttons__container">
+      <button [disabled]="dataService.pageNum <= 1" (click)="prevPage()">
+        Prev
       </button>
-      <span class="current-page__indicator">
-        {{ dataService.pageNum }}
-      </span>
-      <button *ngIf="dataService.pageNum < 42" (click)="nextPage()">
-        {{ dataService.pageNum + 1 }}
+      <div class="page__selector">
+        <button *ngIf="dataService.pageNum > 1" (click)="prevPage()">
+          {{ dataService.pageNum - 1 }}
+        </button>
+        <span class="current-page__indicator">
+          {{ dataService.pageNum }}
+        </span>
+        <button *ngIf="dataService.pageNum < 42" (click)="nextPage()">
+          {{ dataService.pageNum + 1 }}
+        </button>
+      </div>
+      <button [disabled]="dataService.pageNum >= 42" (click)="nextPage()">
+        Next
       </button>
-    </div>
-    <button [disabled]="dataService.pageNum >= 42" (click)="nextPage()">
-      Next
-    </button>
-  </article>
-</section>
+    </article>
+  </section>
 
-<div *ngIf="!datos">
-  <p>Cargando datos...</p>
-</div>
+  <div *ngIf="!datos">
+    <p>Cargando datos...</p>
+  </div>
+</main>
