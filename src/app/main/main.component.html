@@ -67,9 +67,9 @@
       <button *ngIf="dataService.pageNum > 1" (click)="prevPage()">
         {{ dataService.pageNum - 1 }}
       </button>
-      <button class="selector__actual-page" disabled>
+      <span class="current-page__indicator">
         {{ dataService.pageNum }}
-      </button>
+      </span>
       <button (click)="nextPage()">
         {{ dataService.pageNum + 1 }}
       </button>
