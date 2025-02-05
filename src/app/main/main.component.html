@@ -1,26 +1,6 @@
 <main>
   <section>
     <article class="page__filter">
-      <div class="page__filter-container">
-        <label for="page-option-selector">Page</label>
-        <select
-          (change)="pageSelector($event)"
-          name="page-option-selector"
-          id="page-option-selector"
-        >
-          <option
-            [(ngModel)]="dataService.pageNum"
-            value="default"
-            class="page__selector-default"
-          >
-            {{ dataService.pageNum }}
-          </option>
-          <option *ngFor="let page of pageNumbers" [value]="page">
-            {{ page }}
-          </option>
-        </select>
-      </div>
-
       <div class="main__search-container">
         <input
           type="text"
@@ -32,14 +12,36 @@
         </button>
       </div>
 
-      <div class="status__filter-container">
-        <!-- <label>Status:</label> -->
-        <select (change)="statusSelector($event)" name="status">
-          <option value="default">Status</option>
-          <option value="alive">Alive</option>
-          <option value="dead">Dead</option>
-          <option value="unknown">Unknown</option>
-        </select>
+      <div class="second__search-container">
+        <div class="page__filter-container">
+          <label for="page-option-selector">Page</label>
+          <select
+            (change)="pageSelector($event)"
+            name="page-option-selector"
+            id="page-option-selector"
+          >
+            <option
+              [(ngModel)]="dataService.pageNum"
+              value="default"
+              class="page__selector-default"
+            >
+              {{ dataService.pageNum }}
+            </option>
+            <option *ngFor="let page of pageNumbers" [value]="page">
+              {{ page }}
+            </option>
+          </select>
+        </div>
+
+        <div class="status__filter-container">
+          <!-- <label>Status:</label> -->
+          <select (change)="statusSelector($event)" name="status">
+            <option value="default">Status</option>
+            <option value="alive">Alive</option>
+            <option value="dead">Dead</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </div>
       </div>
     </article>
     <article *ngIf="datos" class="container">
