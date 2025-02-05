@@ -33,6 +33,7 @@ footer {
 }
 
 .footer__arrow fa-icon{
+  font-size: 1.2rem;
   color: var(--black-color);
   transition: color .3s ease-in-out;
 }
