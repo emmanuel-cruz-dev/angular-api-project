@@ -1,16 +1,12 @@
 header {
-  padding: 1rem;
-  background-color: var(--black-color);
-}
-
-header a {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--black-color);
+  padding: 1rem;
 }
 
 header img {
-  width: 16%;
+  width: 10rem;
   height: auto;
 }
