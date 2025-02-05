@@ -168,16 +168,10 @@ main,
 .buttons__container button{
   padding: .5rem 1rem;
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 .buttons__container button:disabled{
   cursor: not-allowed;
-}
-
-.page__selector{
-  display: flex;
-  gap: .5rem;
 }
 
 .page__selector-default{

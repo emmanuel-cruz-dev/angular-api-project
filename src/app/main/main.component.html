@@ -69,20 +69,19 @@
       </div>
     </article>
     <article class="buttons__container">
-      <button [disabled]="dataService.pageNum <= 1" (click)="prevPage()">
+      <button *ngIf="dataService.pageNum > 1" (click)="prevPage()">
         <fa-icon [icon]="['fas', 'chevron-left']"></fa-icon>
       </button>
-      <div class="page__selector">
-        <button *ngIf="dataService.pageNum > 1" (click)="prevPage()">
-          {{ dataService.pageNum - 1 }}
-        </button>
-        <span class="current-page__indicator">
-          {{ dataService.pageNum }}
-        </span>
-        <button *ngIf="dataService.pageNum < 42" (click)="nextPage()">
-          {{ dataService.pageNum + 1 }}
-        </button>
-      </div>
+
+      <button *ngIf="dataService.pageNum > 1" (click)="prevPage()">
+        {{ dataService.pageNum - 1 }}
+      </button>
+      <span class="current-page__indicator">
+        {{ dataService.pageNum }}
+      </span>
+      <button *ngIf="dataService.pageNum < 42" (click)="nextPage()">
+        {{ dataService.pageNum + 1 }}
+      </button>
       <button [disabled]="dataService.pageNum >= 42" (click)="nextPage()">
         <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
       </button>
