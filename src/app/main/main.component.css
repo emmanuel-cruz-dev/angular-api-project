@@ -100,12 +100,22 @@ main,
   justify-content: space-between;
 }
 
+.character__id__fill{
+  position: absolute;
+  background-color: var(--primary-color);
+  width: 7rem;
+  height: 5rem;
+  bottom: -2.6rem;
+  left: -3.2rem;
+  transform: rotate(45deg);
+}
+
 .character__id {
   position: absolute;
-  bottom: .5rem;
-  left: .5rem;
+  bottom: -6px;
+  left: -2px;
   font-size: 0.8rem;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   color: var(--black-color);
   font-weight: 600;
   width: 40px;
