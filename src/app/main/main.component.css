@@ -22,6 +22,35 @@ main,
   min-height: calc(100vh - 7rem);
 }
 
+.page__filter-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white-color);
+  border-radius: 4rem;
+  overflow: hidden;
+}
+
+.page__filter-container label{
+  font-size: 1.05rem;
+  padding-left: 1rem;
+  padding-right: .5rem;
+}
+
+.page__filter-container select{
+  width: 100%;
+  font-size: 1.05rem;
+  padding-right: .5rem;
+  margin-right: .5rem;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.page__filter-container select:focus{
+  outline: none;
+}
+
 .main__search-container{
   width: 34%;
   display: flex;
@@ -47,7 +76,7 @@ main,
 .main__search-container button{
   font-size: 1.1rem;
   height: 100%;
-  padding: .5rem 1rem;
+  padding: 0 1rem;
   font-weight: bolder;
   border: none;
   background-color: var(--primary-color);
@@ -62,6 +91,26 @@ main,
 
 .main__search-container button:hover fa-icon{
   color: var(--white-color);
+}
+
+.status__filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  border-radius: 4rem;
+  overflow: hidden;
+}
+
+.main__search-container,
+.page__filter-container,
+.status__filter-container{
+  height: 2.5rem;
+}
+
+.page__filter-container,
+.status__filter-container {
+  width: 7rem;
 }
 
 .container{

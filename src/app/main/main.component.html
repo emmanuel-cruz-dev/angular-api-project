@@ -1,7 +1,7 @@
 <main>
   <section>
     <article class="page__filter">
-      <div>
+      <div class="page__filter-container">
         <label for="page-option-selector">Page:</label>
         <select
           (change)="pageSelector($event)"
@@ -32,7 +32,7 @@
         </button>
       </div>
 
-      <div>
+      <div class="status__filter-container">
         <!-- <label>Status:</label> -->
         <select (change)="statusSelector($event)" name="status">
           <option value="default">Status</option>
