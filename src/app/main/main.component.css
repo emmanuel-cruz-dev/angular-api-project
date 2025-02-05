@@ -6,6 +6,7 @@ main {
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
+  font-family: -apple-system, 'Helvetica Neue', sans-serif;
 }
 
 .page__filter{
@@ -100,6 +101,20 @@ main,
   background-color: var(--white-color);
   border-radius: 4rem;
   overflow: hidden;
+}
+
+.status__filter-container select{
+  width: 100%;
+  font-size: 1.05rem;
+  padding-left: 1rem;
+  margin-right: .5rem;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.status__filter-container select:focus{
+  outline: none;
 }
 
 .main__search-container,
