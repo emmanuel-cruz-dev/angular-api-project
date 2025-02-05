@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { DataService } from '../data.service';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
@@ -7,7 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-main',
-  imports: [NgIf, NgFor, NgClass, FontAwesomeModule],
+  imports: [NgIf, NgFor, NgClass, FontAwesomeModule, FormsModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
@@ -69,7 +70,7 @@ export class MainComponent implements OnInit {
 
   pageSelector(event: Event) {
     const target = event.target as HTMLSelectElement;
-    const value = target ? target.value : '10';
+    const value = target ? target.value : '';
     const num = Number(value);
     this.dataService.pageNum = num;
     this.llenarDatos(num);
