@@ -162,30 +162,28 @@ main,
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-block: 1rem;
 }
 
-.buttons__container button{
+.page-navigator__button, .current-page__indicator{
+  font-size: 1.025rem;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 10%;
   font-weight: 550;
   border: none;
   cursor: pointer;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
-.page__selector-default{
-  color: #848383;
-}
-
-.buttons__container button:hover{
+.page-navigator__button:hover{
   background-color: #07d14d;
+  color: var(--white-color);
 }
 
 .current-page__indicator{
   background-color: var(--primary-color);
   color: var(--white-color);
-  border: none;
   user-select: none;
   cursor:auto !important;
 }
