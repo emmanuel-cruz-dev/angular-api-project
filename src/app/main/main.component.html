@@ -19,14 +19,8 @@
             (change)="pageSelector($event)"
             name="page-option-selector"
             id="page-option-selector"
+            [(ngModel)]="dataService.pageNum"
           >
-            <option
-              [(ngModel)]="dataService.pageNum"
-              value="default"
-              class="page__selector-default"
-            >
-              {{ dataService.pageNum }}
-            </option>
             <option *ngFor="let page of pageNumbers" [value]="page">
               {{ page }}
             </option>
