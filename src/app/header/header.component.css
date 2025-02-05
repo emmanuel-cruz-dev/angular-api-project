@@ -1,12 +1,31 @@
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--black-color);
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 header img {
   width: 12rem;
   height: auto;
+}
+
+.header__logo {
+  width: 3rem;
+}
+
+.header__logo img {
+  width: 100%;
+}
+
+.header__audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  overflow: hidden;
 }
