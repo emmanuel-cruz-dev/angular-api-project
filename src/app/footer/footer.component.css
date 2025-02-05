@@ -1,25 +1,23 @@
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 1rem;
   align-items: center;
   padding: 2rem 1.75rem;
   background-color: var(--black-color);
   color: var(--light-grey-color);
   font-family: -apple-system, 'Helvetica Neue', sans-serif;
-}
-
-.footer__copyright,
-.footer__arrow__container {
-  flex: 1;
-}
-
-.footer__arrow__container{
   position: relative;
+}
+
+.footer__fill {
+  display: none;
 }
 
 .footer__arrow{
   position: absolute;
-  right: 0;
+  right: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
   text-align: right;
@@ -53,4 +51,19 @@ footer {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 968px) {
+  footer{
+    flex-direction: row;
+  }
+
+  .footer__fill{
+    display: block;
+  }
+
+  .footer__copyright,
+  .footer__fill {
+    flex: 1;
+  }
 }

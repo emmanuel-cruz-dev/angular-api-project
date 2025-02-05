@@ -112,10 +112,10 @@ main,
 
 .character__id {
   position: absolute;
-  bottom: 6px;
+  bottom: 7px;
   right: 96.2%;
   transform: translateX(50%);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--black-color);
   font-weight: 600;
 }
@@ -143,13 +143,14 @@ main,
   display: inline-block;
   width: 10px;
   height: 10px;
+  margin-right: .2rem;
   border-radius: 50%;
-  margin-right: 0.5rem;
   vertical-align: middle;
 }
 
 .status-alive::before {
   background-color: rgb(85, 204, 68);
+  margin-right: 0.5rem;
   animation: pulse 1s infinite;
 }
 
