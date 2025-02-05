@@ -113,7 +113,8 @@ main,
 .character__id {
   position: absolute;
   bottom: 6px;
-  left: 6px;
+  right: 96.2%;
+  transform: translateX(50%);
   font-size: 0.8rem;
   color: var(--black-color);
   font-weight: 600;
