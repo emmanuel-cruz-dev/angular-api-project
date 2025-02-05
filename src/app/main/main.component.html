@@ -45,7 +45,7 @@
       </div>
     </article>
     <article *ngIf="datos" class="container">
-      <div *ngFor="let char of datos" class="character__container">
+      <article *ngFor="let char of datos" class="character__container">
         <span class="character__id__fill"></span>
         <span class="character__id">#{{ char.id }}</span>
         <img src="{{ char.image }}" />
@@ -77,7 +77,7 @@
             <p>{{ getEpisodeNumber(char.episode[0]) }}</p>
           </div>
         </div>
-      </div>
+      </article>
     </article>
     <article class="buttons__container">
       <button
