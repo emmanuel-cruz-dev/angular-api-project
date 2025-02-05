@@ -14,8 +14,8 @@ main {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 main,
@@ -46,6 +46,7 @@ main,
   border: none;
   background-color: transparent;
   color: inherit;
+  cursor: pointer;
 }
 
 .page__filter-container select:focus{

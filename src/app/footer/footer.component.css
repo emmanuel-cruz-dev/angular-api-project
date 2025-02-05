@@ -4,7 +4,7 @@ footer {
   justify-content: space-between;
   gap: 1rem;
   align-items: center;
-  padding: 2rem 1.75rem;
+  padding: 2.25rem 1.75rem;
   background-color: var(--black-color);
   color: var(--light-grey-color);
   font-family: -apple-system, 'Helvetica Neue', sans-serif;
@@ -17,12 +17,12 @@ footer {
 
 .footer__arrow{
   position: absolute;
-  right: 1.5rem;
+  right: 1.75rem;
   top: 50%;
   transform: translateY(-50%);
   text-align: right;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3rem;
+  height: 3rem;
   border: none;
   border-radius: 50%;
   display: flex;
