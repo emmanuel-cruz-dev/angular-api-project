@@ -5,10 +5,11 @@
   <a href="/">
     <img src="/logo-title.png" alt="logo" />
   </a>
-  <div class="header__audio">
+  <article class="header__audio">
     <audio id="audioPlayer">
       <source src="/public/theme-song.mp3" type="audio/mp3" />
     </audio>
-    <button>Play</button>
-  </div>
+    <fa-icon [icon]="['fas', 'volume-high']"></fa-icon>
+    <fa-icon [icon]="['fas', 'volume-mute']"></fa-icon>
+  </article>
 </header>

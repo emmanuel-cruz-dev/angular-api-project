@@ -28,4 +28,5 @@ header img {
   border-radius: 50%;
   background-color: var(--primary-color);
   overflow: hidden;
+  cursor: pointer;
 }
