@@ -2,8 +2,12 @@
   <section>
     <article class="page__filter">
       <div>
-        <label>Page:</label>
-        <select (change)="pageSelector($event)" name="page">
+        <label for="page-option-selector">Page:</label>
+        <select
+          (change)="pageSelector($event)"
+          name="page-option-selector"
+          id="page-option-selector"
+        >
           <option
             [(ngModel)]="dataService.pageNum"
             value="default"
