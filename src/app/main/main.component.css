@@ -25,9 +25,8 @@ main,
   width: 32%;
   display: flex;
   align-items: center;
-  background-color: #efefef;
+  background-color: var(--dark-grey-color);
   border-radius: 4rem;
-  /* box-shadow: 0 0 5px #ccc; */
   overflow: hidden;
 }
 
@@ -36,6 +35,7 @@ main,
   font-size: 1.05rem;
   border: none;
   background-color: transparent;
+  color: var(--white-color);
   padding: 0 1rem;
 }
 
@@ -78,11 +78,10 @@ main,
   width: 100%;
   display: flex;
   gap: 1rem;
-  border: 1px solid #ccc;
   border-radius: 8px;
-  /* box-shadow: 0 0 5px #ccc; */
   box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
-  background-color: #efefef;
+  background-color: var(--dark-grey-color);
+  color: var(--white-color);
   overflow: hidden;
   position: relative;
 }
@@ -142,7 +141,6 @@ main,
   border-radius: 50%;
   margin-right: 0.5rem;
   vertical-align: middle;
-  box-shadow: 0 0 5px #ccc;
 }
 
 .status-alive::before {
@@ -151,7 +149,7 @@ main,
 }
 
 .status-dead::before {
-  background-color: rgb(235, 46, 17);
+  background-color: red;
 }
 
 .unknown::before {
