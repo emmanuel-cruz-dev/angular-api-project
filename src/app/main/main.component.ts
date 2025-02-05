@@ -58,13 +58,13 @@ export class MainComponent implements OnInit {
   prevPage() {
     console.log('Previous Page');
     if (this.dataService.pageNum === 1) return;
-    this.scrollToTop();
+    this.dataService.ScrollToTop();
     this.llenarDatos((this.dataService.pageNum -= 1));
   }
 
   nextPage() {
     console.log('Next Page');
-    this.scrollToTop();
+    this.dataService.ScrollToTop();
     this.llenarDatos((this.dataService.pageNum += 1));
   }
 
@@ -74,10 +74,6 @@ export class MainComponent implements OnInit {
     const num = Number(value);
     this.dataService.pageNum = num;
     this.llenarDatos(num);
-  }
-
-  scrollToTop() {
-    window.scrollTo(0, 0);
   }
 
   searchCharacter() {

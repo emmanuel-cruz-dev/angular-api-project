@@ -31,4 +31,8 @@ export class DataService {
   public getCharacterStatus(status: string): Observable<any> {
     return this.http.get<any>(`${this.characterStatus}${status}`);
   }
+
+  public ScrollToTop() {
+    window.scrollTo(0, 0);
+  }
 }

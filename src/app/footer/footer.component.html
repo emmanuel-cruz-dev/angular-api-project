@@ -22,7 +22,11 @@
   </p>
 
   <div class="footer__fill"></div>
-  <a class="footer__arrow" href="#" title="Scroll to top">
+  <button
+    class="footer__arrow"
+    title="Scroll to top"
+    (click)="scrollFunction()"
+  >
     <fa-icon [icon]="['fas', 'chevron-up']"></fa-icon>
-  </a>
+  </button>
 </footer>
