@@ -24,6 +24,9 @@ export class HeaderComponent implements OnInit {
     if (audioPlayer) {
       audioPlayer.addEventListener('play', () => (this.isPlaying = true));
       audioPlayer.addEventListener('pause', () => (this.isPlaying = false));
+      audioPlayer.addEventListener('ended', () =>
+        this.handleAudioEnded(audioPlayer)
+      );
     }
   }
 
@@ -40,5 +43,10 @@ export class HeaderComponent implements OnInit {
         audioPlayer.pause();
       }
     }
+  }
+
+  handleAudioEnded(audioPlayer: HTMLAudioElement) {
+    audioPlayer.currentTime = 0;
+    audioPlayer.play();
   }
 }
