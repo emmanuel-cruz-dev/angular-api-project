@@ -11,10 +11,10 @@ Este es un proyecto desarrollado con **Angular** que consume la API pública de 
 ## 📦 **Tecnologías utilizadas**
 
 - 🅰️ **Angular** (Framework Frontend)
-- 🎨 **CSS** (Estilos)
 - 🔗 **[Rick and Morty API](https://rickandmortyapi.com/)** (Fuente de datos)
 - 🌐 **HTTPClient** (Para realizar peticiones a la API)
 - 🔄 **RxJS** (Manejo de peticiones asíncronas)
+- 🎨 **CSS** (Estilos)
 
 ## 🚧 **Estado del proyecto**
 
