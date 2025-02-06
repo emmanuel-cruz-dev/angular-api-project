@@ -24,6 +24,7 @@
             name="page-option-selector"
             id="page-option-selector"
             [(ngModel)]="dataService.pageNum"
+            title="Select page"
           >
             <option *ngFor="let page of pageNumbers" [value]="page">
               {{ page }}
@@ -32,7 +33,11 @@
         </div>
 
         <div class="status__filter-container">
-          <select (change)="statusSelector($event)" name="status">
+          <select
+            (change)="statusSelector($event)"
+            name="status"
+            title="Select status"
+          >
             <option value="default">Status</option>
             <option value="alive">Alive</option>
             <option value="dead">Dead</option>
@@ -44,7 +49,7 @@
     <article *ngIf="datos" class="container">
       <article *ngFor="let char of datos" class="character__container">
         <span class="character__id__fill"></span>
-        <span class="character__id">#{{ char.id }}</span>
+        <span class="character__id" title="ID">#{{ char.id }}</span>
         <img
           src="{{ char.image }}"
           alt="Image of {{ char.name }}"
