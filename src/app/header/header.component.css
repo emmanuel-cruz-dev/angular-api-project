@@ -13,6 +13,11 @@ header img {
 
 .header__logo {
   width: 3rem;
+  transition: transform .3s ease-in-out;
+}
+
+.header__logo:hover{
+  transform: scale(1.05);
 }
 
 .header__logo img {
@@ -29,4 +34,9 @@ header img {
   background-color: var(--primary-color);
   overflow: hidden;
   cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+
+.header__audio:hover{
+  transform: scale(1.05);
 }
