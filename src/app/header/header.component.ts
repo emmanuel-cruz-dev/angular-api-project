@@ -32,8 +32,6 @@ export class HeaderComponent implements OnInit {
   }
 
   playPauseAudio() {
-    console.log(this.isPlaying);
-
     const audioPlayer = document.getElementById(
       'audioPlayer'
     ) as HTMLAudioElement;

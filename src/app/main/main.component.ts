@@ -56,14 +56,12 @@ export class MainComponent implements OnInit {
   }
 
   prevPage() {
-    console.log('Previous Page');
     if (this.dataService.pageNum === 1) return;
     this.dataService.ScrollToTop();
     this.llenarDatos((this.dataService.pageNum -= 1));
   }
 
   nextPage() {
-    console.log('Next Page');
     this.dataService.ScrollToTop();
     this.llenarDatos((this.dataService.pageNum += 1));
   }
@@ -106,22 +104,11 @@ export class MainComponent implements OnInit {
       alert('Character name not found');
     }
   }
-  // if (searchInput) {
-  //   const value = searchInput.value;
-  //   console.log(value);
-  //   this.dataService.searchCharacter(value).subscribe((data) => {
-  //     this.datos = data.results;
-  //     this.precargarEpisodios(); // Asegúrate de precargar los episodios si es necesario
-  //   });
-  // } else {
-  //   console.error('Search input element not found');
-  //   alert('Character name not found');
-  // }
 
   statusSelector(event: Event) {
     const target = event.target as HTMLSelectElement;
     const value = target ? target.value : 'Alive';
-    console.log(value);
+
     this.dataService.getCharacterStatus(value).subscribe((data) => {
       this.datos = data.results;
       this.dataService.getCharacterStatus(value);
