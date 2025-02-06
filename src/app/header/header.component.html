@@ -9,7 +9,15 @@
     <audio id="audioPlayer">
       <source src="/theme-song.mp3" type="audio/mp3" />
     </audio>
-    <fa-icon *ngIf="isPlaying" [icon]="['fas', 'volume-high']"></fa-icon>
-    <fa-icon *ngIf="!isPlaying" [icon]="['fas', 'volume-mute']"></fa-icon>
+    <fa-icon
+      *ngIf="isPlaying"
+      [icon]="['fas', 'volume-high']"
+      title="Turn off audio"
+    ></fa-icon>
+    <fa-icon
+      *ngIf="!isPlaying"
+      [icon]="['fas', 'volume-mute']"
+      title="Activate audio"
+    ></fa-icon>
   </article>
 </header>
