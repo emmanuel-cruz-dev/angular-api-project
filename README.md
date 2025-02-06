@@ -2,6 +2,10 @@
 
 Este es un proyecto desarrollado con **Angular** que consume la API pública de **Rick and Morty** para mostrar información sobre los personajes, ubicaciones y episodios de la serie.
 
+## 🌐 **Demo Online**
+
+[Visita el sitio aquí](https://emmanuel-cruz-dev.github.io/angular-api-project/)
+
 ## ✨ **Características**
 
 - 🔍 Listado de personajes con imágenes y detalles.
