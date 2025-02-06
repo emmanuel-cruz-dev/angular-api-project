@@ -6,13 +6,12 @@ Este es un proyecto desarrollado con **Angular** que consume la API pública de 
 
 - 🔍 Listado de personajes con imágenes y detalles.
 - 🏠 Información de ubicaciones (planetas, dimensiones, etc.).
-- 🎬 Lista de episodios con fecha de emisión.
 - 🎨 Interfaz moderna y responsiva.
 
 ## 📦 **Tecnologías utilizadas**
 
 - 🅰️ **Angular** (Framework Frontend)
-- 🎨 **CSS/Tailwind/SASS** (Estilos)
+- 🎨 **CSS** (Estilos)
 - 🔗 **[Rick and Morty API](https://rickandmortyapi.com/)** (Fuente de datos)
 - 🌐 **HTTPClient** (Para realizar peticiones a la API)
 - 🔄 **RxJS** (Manejo de peticiones asíncronas)
