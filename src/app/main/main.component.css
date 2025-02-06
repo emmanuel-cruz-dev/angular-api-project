@@ -156,11 +156,22 @@ main,
   color: var(--white-color);
   overflow: hidden;
   position: relative;
+  transition: background-color .3s ease-in-out;
 }
 
 .character__container img {
   width: 40%;
   height: auto;
+  opacity: .9;
+  transition: opacity .3s ease-in-out;
+}
+
+.character__container:hover img{
+  opacity: 1;
+}
+
+.character__container:hover{
+  background-color: var(--secondary-color);
 }
 
 .character__info {
@@ -181,6 +192,7 @@ main,
   bottom: -2.6rem;
   left: -3.2rem;
   transform: rotate(45deg);
+  z-index: 1;
 }
 
 .character__id {
@@ -191,6 +203,7 @@ main,
   font-size: 0.85rem;
   color: var(--black-color);
   font-weight: 600;
+  z-index: 1;
 }
 
 .character__name {
