@@ -42,7 +42,13 @@
       <article *ngFor="let char of datos" class="character__container">
         <span class="character__id__fill"></span>
         <span class="character__id">#{{ char.id }}</span>
-        <img src="{{ char.image }}" />
+        <img
+          src="{{ char.image }}"
+          alt="Image of {{ char.name }}"
+          width="300"
+          height="300"
+          loading="lazy"
+        />
         <div class="character__info">
           <div>
             <p class="character__name">{{ char.name }}</p>
