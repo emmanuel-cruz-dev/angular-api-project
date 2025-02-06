@@ -87,6 +87,7 @@
         class="page-navigator__button"
         *ngIf="dataService.pageNum > 1"
         (click)="prevPage()"
+        title="Previous page"
       >
         <fa-icon [icon]="['fas', 'chevron-left']"></fa-icon>
       </button>
@@ -94,16 +95,18 @@
         class="page-navigator__button"
         *ngIf="dataService.pageNum > 1"
         (click)="prevPage()"
+        title="Page {{ dataService.pageNum - 1 }}"
       >
         {{ dataService.pageNum - 1 }}
       </button>
-      <button class="current-page__indicator">
+      <button class="current-page__indicator" title="Current page">
         {{ dataService.pageNum }}
       </button>
       <button
         class="page-navigator__button"
         *ngIf="dataService.pageNum < 42"
         (click)="nextPage()"
+        title="Page {{ dataService.pageNum + 1 }}"
       >
         {{ dataService.pageNum + 1 }}
       </button>
@@ -111,6 +114,7 @@
         class="page-navigator__button"
         *ngIf="dataService.pageNum < 42"
         (click)="nextPage()"
+        title="Next page"
       >
         <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
       </button>
