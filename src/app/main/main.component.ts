@@ -80,9 +80,9 @@ export class MainComponent implements OnInit {
     ) as HTMLInputElement | null;
 
     if (!searchInput) return;
+
     try {
       const value = searchInput.value;
-      console.log(value);
 
       this.dataService.searchCharacter(value).subscribe(
         (data) => {
