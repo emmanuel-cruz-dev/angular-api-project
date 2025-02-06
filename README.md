@@ -1,4 +1,4 @@
-# 🛸 Rick and Morty API - Angular Project
+# 🛸 Rick and Morty API
 
 Este es un proyecto desarrollado con **Angular** que consume la API pública de **Rick and Morty** para mostrar información sobre los personajes, ubicaciones y episodios de la serie.
 
@@ -17,6 +17,6 @@ Este es un proyecto desarrollado con **Angular** que consume la API pública de 
 - 🌐 **HTTPClient** (Para realizar peticiones a la API)
 - 🔄 **RxJS** (Manejo de peticiones asíncronas)
 
-## **Estado del proyecto**
+## 🚧 **Estado del proyecto**
 
-- En desarrollo.
+- 🛠️ En desarrollo.
