@@ -16,7 +16,6 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   public getData(num = this.pageNum): Observable<any> {
-    console.log(`${this.apiUrl}${num}`);
     return this.http.get<any>(`${this.apiUrl}${num}`);
   }
 
