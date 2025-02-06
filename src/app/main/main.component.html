@@ -28,7 +28,6 @@
         </div>
 
         <div class="status__filter-container">
-          <!-- <label>Status:</label> -->
           <select (change)="statusSelector($event)" name="status">
             <option value="default">Status</option>
             <option value="alive">Alive</option>
@@ -51,8 +50,8 @@
         />
         <div class="character__info">
           <div>
-            <p class="character__name">{{ char.name }}</p>
-            <p class="character__data">
+            <p class="character__name" title="Name">{{ char.name }}</p>
+            <p class="character__data" title="Status">
               <span
                 [ngClass]="{
                   'status-alive': char.status === 'Alive',
@@ -63,7 +62,7 @@
                 {{ char.status }}
               </span>
               -
-              <span>{{ char.species }}</span>
+              <span title="Species">{{ char.species }}</span>
             </p>
           </div>
 
