@@ -13,7 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   styleUrl: './main.component.css',
 })
 export class MainComponent implements OnInit {
-  datos: any[] = [];
+  data: any[] = [];
   episode: { [key: number]: string } = {};
   pages: number = 42;
   pageNumbers: number[] = [];
@@ -29,14 +29,14 @@ export class MainComponent implements OnInit {
 
   llenarDatos(num = this.dataService.pageNum) {
     this.dataService.getData(num).subscribe((data) => {
-      this.datos = data.results;
+      this.data = data.results;
       this.precargarEpisodios();
     });
   }
 
   precargarEpisodios() {
     const episodeNumbers = new Set<number>();
-    this.datos.forEach((char) => {
+    this.data.forEach((char) => {
       char.episode.forEach((url: string) => {
         const num = Number(url.slice(url.lastIndexOf('/') + 1));
         episodeNumbers.add(num);
@@ -87,7 +87,7 @@ export class MainComponent implements OnInit {
       this.dataService.searchCharacter(value).subscribe(
         (data) => {
           if (data.results && data.results.length > 0) {
-            this.datos = data.results;
+            this.data = data.results;
             this.precargarEpisodios(); // Asegúrate de precargar los episodios si es necesario
           } else {
             console.error('Character not found');
@@ -110,7 +110,7 @@ export class MainComponent implements OnInit {
     const value = target ? target.value : 'Alive';
 
     this.dataService.getCharacterStatus(value).subscribe((data) => {
-      this.datos = data.results;
+      this.data = data.results;
       this.dataService.getCharacterStatus(value);
     });
   }
