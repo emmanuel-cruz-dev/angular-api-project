@@ -23,11 +23,11 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.llenarDatos();
+    this.fillData();
     this.generatePageNumbers();
   }
 
-  llenarDatos(num = this.dataService.pageNum) {
+  fillData(num = this.dataService.pageNum) {
     this.dataService.getData(num).subscribe((data) => {
       this.data = data.results;
       this.precargarEpisodios();
@@ -58,12 +58,12 @@ export class MainComponent implements OnInit {
   prevPage() {
     if (this.dataService.pageNum === 1) return;
     this.dataService.ScrollToTop();
-    this.llenarDatos((this.dataService.pageNum -= 1));
+    this.fillData((this.dataService.pageNum -= 1));
   }
 
   nextPage() {
     this.dataService.ScrollToTop();
-    this.llenarDatos((this.dataService.pageNum += 1));
+    this.fillData((this.dataService.pageNum += 1));
   }
 
   pageSelector(event: Event) {
@@ -71,7 +71,7 @@ export class MainComponent implements OnInit {
     const value = target ? target.value : '';
     const num = Number(value);
     this.dataService.pageNum = num;
-    this.llenarDatos(num);
+    this.fillData(num);
   }
 
   searchCharacter() {
