@@ -95,12 +95,12 @@ export class MainComponent implements OnInit {
           }
         },
         (error) => {
-          console.error('Search input element not found', error);
+          console.error('Character not found', error);
           alert('Character name not found');
         }
       );
     } catch (error) {
-      console.error('Search input element not found');
+      console.error('Characer not found', error);
       alert('Character name not found');
     }
   }
