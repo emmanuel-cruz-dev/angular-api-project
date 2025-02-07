@@ -30,11 +30,11 @@ export class MainComponent implements OnInit {
   fillData(num = this.dataService.pageNum) {
     this.dataService.getData(num).subscribe((data) => {
       this.data = data.results;
-      this.precargarEpisodios();
+      this.preloadEpisodes();
     });
   }
 
-  precargarEpisodios() {
+  preloadEpisodes() {
     const episodeNumbers = new Set<number>();
     this.data.forEach((char) => {
       char.episode.forEach((url: string) => {
@@ -88,7 +88,7 @@ export class MainComponent implements OnInit {
         (data) => {
           if (data.results && data.results.length > 0) {
             this.data = data.results;
-            this.precargarEpisodios(); // Asegúrate de precargar los episodios si es necesario
+            this.preloadEpisodes(); // Asegúrate de precargar los episodios si es necesario
           } else {
             console.error('Character not found');
             alert('Character name not found');
