@@ -219,7 +219,7 @@ main,
 
 .character__subtitle {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--light-grey-color);
   margin-bottom: 0.3rem;
 }
 
