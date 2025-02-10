@@ -48,14 +48,16 @@
     </article>
     <article *ngIf="data" class="container">
       <article *ngFor="let char of data" class="character__container">
-        <span class="character__id__fill"></span>
-        <span class="character__id" title="ID">#{{ char.id }}</span>
-        <img
-          src="{{ char.image }}"
-          alt="Image of {{ char.name }}"
-          width="300"
-          height="300"
-        />
+        <div class="character__id-image__container">
+          <span class="character__id__fill"></span>
+          <span class="character__id" title="ID">#{{ char.id }}</span>
+          <img
+            src="{{ char.image }}"
+            alt="Image of {{ char.name }}"
+            width="300"
+            height="300"
+          />
+        </div>
         <div class="character__info">
           <div>
             <p class="character__name" title="Name">{{ char.name }}</p>
