@@ -164,6 +164,7 @@ main,
   width: 40%;
   height: auto;
   opacity: .9;
+  object-fit: cover;
   transition: opacity .3s ease-in-out;
 }
 
