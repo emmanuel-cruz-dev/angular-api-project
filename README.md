@@ -1,3 +1,5 @@
+![Rick and Morty](src/assets/rick-morty-banner.jpg)
+
 # 🛸 Rick and Morty API
 
 Este es un proyecto desarrollado con **Angular** que consume la API pública de **Rick and Morty** para mostrar información sobre los personajes, ubicaciones y episodios de la serie.
