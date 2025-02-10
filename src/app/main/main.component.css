@@ -165,7 +165,7 @@ main,
 .character__container img {
   width: 100%;
   /* width: 40%; */
-  height: auto;
+  height: 100%;
   /* opacity: .9; */
   object-fit: cover;
   transition: opacity .3s ease-in-out;
@@ -190,6 +190,7 @@ main,
   justify-content: space-between;
   border-bottom: 5px solid var(--primary-color);
   border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .character__id-image__container{
@@ -310,6 +311,8 @@ main,
   .character__container img {
     opacity: .9;
   }
+
+
 }
 
 @media screen and (min-width: 768px) {
@@ -319,6 +322,10 @@ main,
 
   .character__container img {
     width: 40%;
+  }
+
+  .character__info {
+    border-bottom-left-radius: 0;
   }
 }
 
