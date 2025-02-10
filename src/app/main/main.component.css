@@ -294,6 +294,12 @@ main,
   }
 }
 
+@media screen and (max-width: 570px) {
+  .character__container img {
+    opacity: 1;
+  }
+}
+
 @media screen and (min-width: 968px) {
   .main__search-container {
     width: 50%;
