@@ -213,7 +213,8 @@ main,
 .character__id {
   position: absolute;
   bottom: 7px;
-  right: 96.2%;
+  /* right: 92%; */
+  left: 7px;
   transform: translateX(50%);
   font-size: 0.85rem;
   color: var(--black-color);
@@ -337,5 +338,9 @@ main,
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 1124px;
+  }
+
+  .character__id{
+    right: 94%;
   }
 }
