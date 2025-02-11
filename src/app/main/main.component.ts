@@ -38,6 +38,12 @@ export class MainComponent implements OnInit {
     this.dataService.displayCharacters(container, name, status);
   }
 
+  filterName(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const value = input.value;
+    console.log(value); // Aquí puedes agregar la lógica para buscar un personaje
+  }
+
   // Final: Nueva Lógica
 
   fillData(num = this.dataService.pageNum) {

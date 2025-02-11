@@ -6,6 +6,7 @@
           type="text"
           placeholder="Search for a character"
           id="search-character__input"
+          (input)="filterName($event)"
         />
         <button
           (click)="searchCharacter()"
