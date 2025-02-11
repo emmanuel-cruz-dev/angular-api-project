@@ -8,19 +8,19 @@
           id="search-character__input"
           (input)="filterName($event)"
         />
-        <button
+        <!-- <button
           (click)="searchCharacter()"
           class="search-button"
           title="Search"
         >
           <fa-icon [icon]="['fas', 'search']"></fa-icon>
-        </button>
+        </button> -->
       </div>
 
       <div class="second__search-container">
         <div class="page__filter-container">
           <label for="page-option-selector">Page</label>
-          <select
+          <!-- <select
             (change)="pageSelector($event)"
             name="page-option-selector"
             id="page-option-selector"
@@ -30,7 +30,7 @@
             <option *ngFor="let page of pageNumbers" [value]="page">
               {{ page }}
             </option>
-          </select>
+          </select> -->
         </div>
 
         <div class="status__filter-container">
@@ -47,8 +47,8 @@
         </div>
       </div>
     </article>
-    <!-- <article *ngIf="data" class="container">
-      <article *ngFor="let char of data" class="character__container">
+    <article *ngIf="characters" class="container">
+      <article *ngFor="let char of characters" class="character__container">
         <div class="character__id-image__container">
           <span class="character__id__fill"></span>
           <span class="character__id" title="ID">#{{ char.id }}</span>
@@ -89,9 +89,9 @@
           </div>
         </div>
       </article>
-    </article> -->
-    <article class="container"></article>
-    <article class="buttons__container">
+    </article>
+    <!-- <article class="container"></article> -->
+    <!-- <article class="buttons__container">
       <button
         class="page-navigator__button"
         *ngIf="dataService.pageNum > 1"
@@ -127,10 +127,10 @@
       >
         <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
       </button>
-    </article>
+    </article> -->
   </section>
 
-  <div *ngIf="!data" class="loading">
+  <div *ngIf="!characters" class="loading">
     <p>Cargando datos...</p>
   </div>
 </main>

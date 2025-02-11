@@ -46,48 +46,49 @@ export class DataService {
     const characters = await this.getCharacters(name, status);
 
     container.innerHTML = '';
+    return characters;
 
-    for (let character of characters) {
-      const card = document.createElement('div');
-      card.classList.add('character__card');
-      card.innerHTML = `
-        <div class="character__id-image__container">
-          <span class="character__id__fill"></span>
-          <span class="character__id" title="ID">#${character.id}</span>
-          <img
-            src="${character.image}"
-            alt="Image of ${character.name}"
-            width="300"
-            height="300"
-            title="${character.name}"
-          />
-        </div>
-        <div class="character__info">
-          <div>
-            <p class="character__name" title="Name">${character.name}</p>
-            <p class="character__data" title="Status">
-              <span
-                [ngClass]="{
-                  'status-alive': char.status === 'Alive',
-                  'status-dead': char.status === 'Dead',
-                  unknown: char.status !== 'Alive' && char.status !== 'Dead'
-                }"
-              >
-                ${character.status}
-              </span>
-              -
-              <span title="Species">${character.species}</span>
-            </p>
-          </div>
+    // for (let character of characters) {
+    //   const card = document.createElement('article');
+    //   card.classList.add('character__container');
+    //   card.innerHTML = `
+    //     <div class="character__id-image__container">
+    //       <span class="character__id__fill"></span>
+    //       <span class="character__id" title="ID">#${character.id}</span>
+    //       <img
+    //         src="${character.image}"
+    //         alt="Image of ${character.name}"
+    //         width="300"
+    //         height="300"
+    //         title="${character.name}"
+    //       />
+    //     </div>
+    //     <div class="character__info">
+    //       <div>
+    //         <p class="character__name" title="Name">${character.name}</p>
+    //         <p class="character__data" title="Status">
+    //           <span
+    //             [ngClass]="{
+    //               'status-alive': char.status === 'Alive',
+    //               'status-dead': char.status === 'Dead',
+    //               unknown: char.status !== 'Alive' && char.status !== 'Dead'
+    //             }"
+    //           >
+    //             ${character.status}
+    //           </span>
+    //           -
+    //           <span title="Species">${character.species}</span>
+    //         </p>
+    //       </div>
 
-          <div>
-            <p class="character__subtitle">Last known location:</p>
-            <p>${character.location.name}</p>
-          </div>
-        </div>
-      `;
-      container.appendChild(card);
-    }
+    //       <div>
+    //         <p class="character__subtitle">Last known location:</p>
+    //         <p>${character.location.name}</p>
+    //       </div>
+    //     </div>
+    //   `;
+    //   container.appendChild(card);
+    // }
   }
 
   // Fin: Nueva Lógica
