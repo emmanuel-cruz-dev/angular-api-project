@@ -25,9 +25,18 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.fillData();
     this.generatePageNumbers();
+    this.filterData();
     // this.dataService.getCharacters();
+    // this.dataService.displayCharacters();
+  }
+
+  // Inicio: Nueva Lógica
+  filterData(name?: string, status?: string) {
+    console.log('filterData');
     this.dataService.displayCharacters();
   }
+
+  // Final: Nueva Lógica
 
   fillData(num = this.dataService.pageNum) {
     this.dataService.getData(num).subscribe((data) => {

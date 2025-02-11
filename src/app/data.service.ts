@@ -68,7 +68,7 @@ export class DataService {
           </div>
         </div>
       `;
-      container?.appendChild(card);
+      container && container.appendChild(card);
     }
   }
 
