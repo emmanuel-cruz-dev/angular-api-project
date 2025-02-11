@@ -27,7 +27,11 @@ export class DataService {
     return data.results;
   }
 
-  async displayCharacters(name?: string, status?: string) {
+  async displayCharacters(
+    container: HTMLElement,
+    name?: string,
+    status?: string
+  ) {
     const characters = await this.getCharacters(name, status);
     for (let character of characters) {
       const card = document.createElement('div');
@@ -68,7 +72,7 @@ export class DataService {
           </div>
         </div>
       `;
-      container && container.appendChild(card);
+      container.appendChild(card);
     }
   }
 

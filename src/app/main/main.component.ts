@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../data.service';
 import { NgClass, NgFor, NgIf } from '@angular/common';
@@ -18,22 +18,24 @@ export class MainComponent implements OnInit {
   pages: number = 42;
   pageNumbers: number[] = [];
 
-  constructor(public dataService: DataService, private library: FaIconLibrary) {
+  constructor(
+    public dataService: DataService,
+    private library: FaIconLibrary,
+    private el: ElementRef
+  ) {
     library.addIconPacks(fas);
   }
 
   ngOnInit(): void {
+    const container = this.el.nativeElement.querySelector('.container');
     this.fillData();
     this.generatePageNumbers();
-    this.filterData();
-    // this.dataService.getCharacters();
-    // this.dataService.displayCharacters();
+    this.filterData(container);
   }
 
   // Inicio: Nueva Lógica
-  filterData(name?: string, status?: string) {
-    console.log('filterData');
-    this.dataService.displayCharacters();
+  filterData(container: HTMLElement, name?: string, status?: string) {
+    this.dataService.displayCharacters(container, name, status);
   }
 
   // Final: Nueva Lógica
