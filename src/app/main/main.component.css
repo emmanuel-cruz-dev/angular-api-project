@@ -207,7 +207,7 @@ main,
 .character__id {
   position: absolute;
   bottom: 7px;
-  left: 7px;
+  right: 94.5%;
   transform: translateX(50%);
   font-size: 0.85rem;
   color: var(--black-color);
@@ -317,6 +317,10 @@ main,
     width: 72%;
   }
 
+  .character__id {
+    right: 92.5%;
+  }
+
   .character__info {
     border-bottom-left-radius: 0;
   }
@@ -334,6 +338,6 @@ main,
   }
 
   .character__id{
-    right: 94%;
+    right: 90.5%;
   }
 }
