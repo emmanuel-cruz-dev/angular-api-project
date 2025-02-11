@@ -14,6 +14,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class MainComponent implements OnInit {
   data: any[] = [];
+  nameFilter: string = '';
+  statusFilter: string = '';
   episode: { [key: number]: string } = {};
   pages: number = 42;
   pageNumbers: number[] = [];
@@ -34,28 +36,28 @@ export class MainComponent implements OnInit {
   }
 
   // Inicio: Nueva Lógica
-  filterData(container: HTMLElement, name?: string, status?: string) {
-    this.dataService.displayCharacters(container, name, status);
-  }
 
   filterName(event: Event) {
     const input = event.target as HTMLInputElement;
-    const nameValue = input.value;
-    console.log(nameValue); // Aquí puedes agregar la lógica para buscar un personaje
-
-    this.nameStatusFilter(nameValue);
+    this.nameFilter = input.value;
+    this.nameStatusFilter();
   }
 
   statusSelector(event: Event) {
     const target = event.target as HTMLSelectElement;
-    const statusValue = target ? target.value : 'Alive';
-    this.nameStatusFilter('', statusValue);
+    const statusFilter = target ? target.value : 'alive';
+    this.nameStatusFilter();
   }
 
   nameStatusFilter(name?: string, status?: string) {
     const container = this.el.nativeElement.querySelector('.container');
-    this.filterData(container, name, status);
+    this.filterData(container, this.nameFilter, this.statusFilter);
   }
+
+  filterData(container: HTMLElement, name?: string, status?: string) {
+    this.dataService.displayCharacters(container, name, status);
+  }
+
   // Final: Nueva Lógica
 
   fillData(num = this.dataService.pageNum) {
