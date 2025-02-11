@@ -2,7 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const container = document.querySelector('.container');
+interface Character {
+  id: number;
+  name: string;
+  status: string;
+  species: string;
+  image: string;
+  episode: string[];
+  location: {
+    name: string;
+    type: string;
+  };
+}
 
 @Injectable({
   providedIn: 'root',
@@ -42,10 +53,13 @@ export class DataService {
     container: HTMLElement,
     name?: string,
     status?: string
-  ) {
+  ): Promise<Character[]> {
     const characters = await this.getCharacters(name, status);
 
-    container.innerHTML = '';
+    // container.innerHTML = '';
+
+    console.log(characters);
+
     return characters;
 
     // for (let character of characters) {

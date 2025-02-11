@@ -55,8 +55,13 @@ export class MainComponent implements OnInit {
     this.filterData(container, this.nameFilter, this.statusFilter);
   }
 
-  filterData(container: HTMLElement, name?: string, status?: string) {
+  filterData(container: HTMLElement, name?: string, status?: string): void {
     this.dataService.displayCharacters(container, name, status);
+    this.characters = this.dataService.displayCharacters(
+      container,
+      name,
+      status
+    );
   }
 
   // Final: Nueva Lógica
