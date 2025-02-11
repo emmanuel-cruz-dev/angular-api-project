@@ -45,7 +45,7 @@ export class MainComponent implements OnInit {
 
   statusSelector(event: Event) {
     const target = event.target as HTMLSelectElement;
-    const statusFilter = target ? target.value : 'alive';
+    this.statusFilter = target ? target.value : 'alive';
     this.nameStatusFilter();
   }
 
