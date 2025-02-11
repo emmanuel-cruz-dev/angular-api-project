@@ -39,14 +39,23 @@ export class MainComponent implements OnInit {
   }
 
   filterName(event: Event) {
-    const container = this.el.nativeElement.querySelector('.container');
     const input = event.target as HTMLInputElement;
-    const value = input.value;
-    console.log(value); // Aquí puedes agregar la lógica para buscar un personaje
+    const nameValue = input.value;
+    console.log(nameValue); // Aquí puedes agregar la lógica para buscar un personaje
 
-    this.filterData(container, value, '');
+    this.nameStatusFilter(nameValue);
   }
 
+  statusSelector(event: Event) {
+    const target = event.target as HTMLSelectElement;
+    const statusValue = target ? target.value : 'Alive';
+    this.nameStatusFilter('', statusValue);
+  }
+
+  nameStatusFilter(name?: string, status?: string) {
+    const container = this.el.nativeElement.querySelector('.container');
+    this.filterData(container, name, status);
+  }
   // Final: Nueva Lógica
 
   fillData(num = this.dataService.pageNum) {
@@ -127,15 +136,15 @@ export class MainComponent implements OnInit {
     }
   }
 
-  statusSelector(event: Event) {
-    const target = event.target as HTMLSelectElement;
-    const value = target ? target.value : 'Alive';
+  // statusSelector(event: Event) {
+  //   const target = event.target as HTMLSelectElement;
+  //   const value = target ? target.value : 'Alive';
 
-    this.dataService.getCharacterStatus(value).subscribe((data) => {
-      this.data = data.results;
-      this.dataService.getCharacterStatus(value);
-    });
-  }
+  //   this.dataService.getCharacterStatus(value).subscribe((data) => {
+  //     this.data = data.results;
+  //     this.dataService.getCharacterStatus(value);
+  //   });
+  // }
 
   generatePageNumbers() {
     this.pageNumbers = Array.from({ length: this.pages }, (_, i) => i + 1);
