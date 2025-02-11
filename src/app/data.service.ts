@@ -33,6 +33,9 @@ export class DataService {
     status?: string
   ) {
     const characters = await this.getCharacters(name, status);
+
+    container.innerHTML = '';
+
     for (let character of characters) {
       const card = document.createElement('div');
       card.classList.add('character__card');
