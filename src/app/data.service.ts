@@ -15,6 +15,15 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
+  async getCharacters(name?: string, status?: string) {
+    let url = `https://rickandmortyapi.com/api/character`;
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+
+    return data.results;
+  }
+
   public getData(num = this.pageNum): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}${num}`);
   }
