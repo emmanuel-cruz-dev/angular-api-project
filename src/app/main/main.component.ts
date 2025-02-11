@@ -25,7 +25,8 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.fillData();
     this.generatePageNumbers();
-    this.dataService.getCharacters();
+    // this.dataService.getCharacters();
+    this.dataService.displayCharacters();
   }
 
   fillData(num = this.dataService.pageNum) {
