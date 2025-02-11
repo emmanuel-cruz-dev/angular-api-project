@@ -39,9 +39,12 @@ export class MainComponent implements OnInit {
   }
 
   filterName(event: Event) {
+    const container = this.el.nativeElement.querySelector('.container');
     const input = event.target as HTMLInputElement;
     const value = input.value;
     console.log(value); // Aquí puedes agregar la lógica para buscar un personaje
+
+    this.filterData(container, value, '');
   }
 
   // Final: Nueva Lógica
