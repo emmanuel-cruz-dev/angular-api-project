@@ -27,6 +27,9 @@ export class DataService {
       if (name) {
         url += `name=${name}&`;
       }
+      if (status) {
+        url += `status=${status}`;
+      }
     }
 
     const response = await fetch(url);
