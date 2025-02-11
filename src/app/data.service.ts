@@ -20,7 +20,15 @@ export class DataService {
   // Inicio: Nueva Lógica
 
   async getCharacters(name?: string, status?: string) {
-    let url = `https://rickandmortyapi.com/api/character`;
+    let url = `https://rickandmortyapi.com/api/character/`;
+
+    if (name || status) {
+      url += '?';
+      if (name) {
+        url += `name=${name}&`;
+      }
+    }
+
     const response = await fetch(url);
     const data = await response.json();
 

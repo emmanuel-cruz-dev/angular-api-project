@@ -154,7 +154,7 @@ main,
   flex-direction: column;
   border-radius: 8px;
   box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
-  background-color: var(--dark-grey-color);
+  /* background-color: var(--white-color); */
   color: var(--white-color);
   overflow: hidden;
   transition: background-color .3s ease-in-out;
