@@ -58,8 +58,6 @@ export class DataService {
 
     // container.innerHTML = '';
 
-    console.log(characters);
-
     return characters;
 
     // for (let character of characters) {

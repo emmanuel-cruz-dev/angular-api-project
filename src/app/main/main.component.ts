@@ -62,6 +62,8 @@ export class MainComponent implements OnInit {
       status
     );
     this.characters = characters;
+    console.log(characters);
+    this.preloadEpisodes();
   }
 
   // Final: Nueva Lógica
@@ -73,21 +75,21 @@ export class MainComponent implements OnInit {
   //   });
   // }
 
-  // preloadEpisodes() {
-  //   const episodeNumbers = new Set<number>();
-  //   this.data.forEach((char) => {
-  //     char.episode.forEach((url: string) => {
-  //       const num = Number(url.slice(url.lastIndexOf('/') + 1));
-  //       episodeNumbers.add(num);
-  //     });
-  //   });
+  preloadEpisodes() {
+    const episodeNumbers = new Set<number>();
+    this.characters.forEach((char) => {
+      char.episode.forEach((url: string) => {
+        const num = Number(url.slice(url.lastIndexOf('/') + 1));
+        episodeNumbers.add(num);
+      });
+    });
 
-  //   episodeNumbers.forEach((num) => {
-  //     this.dataService.getEpisodes(num).subscribe((data) => {
-  //       this.episode[num] = data.name;
-  //     });
-  //   });
-  // }
+    episodeNumbers.forEach((num) => {
+      this.dataService.getEpisodes(num).subscribe((data) => {
+        this.episode[num] = data.name;
+      });
+    });
+  }
 
   getEpisodeNumber(url: string): string {
     const num = Number(url.slice(url.lastIndexOf('/') + 1));
